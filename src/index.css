@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- THE POLISH STYLES (From your V8 HTML) --- */
+
+/* 1. Sticky Product Column Logic */
+.sticky-col { 
+    position: sticky; 
+    left: 0; 
+    z-index: 10; 
+    border-right: 2px solid #e2e8f0; 
+}
+
+/* 2. Remove ugly up/down arrows on number inputs */
+input[type="number"] { -moz-appearance: textfield; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* 3. Hide Scrollbars for a cleaner look */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 4. Prevent zooming on mobile inputs */
+@media screen and (max-width: 768px) { 
+    input, select, textarea { font-size: 16px; } 
+}
+
+/* 5. Base Background */
+body {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #1e293b; /* slate-800 */
+}
